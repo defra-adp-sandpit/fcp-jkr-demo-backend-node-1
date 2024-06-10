@@ -43,6 +43,7 @@ extends:
   parameters:
     teamName: fcp-jkr-demo
     serviceName: fcp-jkr-demo-backend-node-1
+    includePlatformEnvs: true
     deployFromFeature: ${{ parameters.deployFromFeature }}
     deployConfigOnly: ${{ parameters.deployConfigOnly }}
     appBuildConfig:

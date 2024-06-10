@@ -1,0 +1,6 @@
+services:
+  ? fcp-jkr-demo-backend-node-1
+  : command: >
+      sh -c "npm run test:watch"
+    volumes:
+      - ./.git:/home/node/.git

@@ -1,0 +1,13 @@
+services:
+  ? fcp-jkr-demo-backend-node-1
+  : build:
+      context: .
+      target: production
+    image: fcp-jkr-demo-backend-node-1
+    container_name: fcp-jkr-demo-backend-node-1
+    depends_on:
+      - fcp-jkr-demo-backend-node-1-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: fcp-jkr-demo-backend-node-1-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+
